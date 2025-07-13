@@ -1,0 +1,708 @@
+body {
+    background-color: #EEEEEE;
+}
+
+.navbar {
+    background-color: #ffffff !important;
+    padding: 10px 15px;
+    box-shadow:
+        8px 8px 15px rgba(0, 0, 0, 0.1),
+        -8px -8px 15px rgba(255, 255, 255, 0.8);
+}
+
+.navbar-brand {
+    font-size: 26px;
+    font-weight: bold;
+    color: black !important;
+    font-style: italic;
+}
+
+.nav-link {
+    color: black !important;
+    font-size: 20px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: rgb(255, 181, 43) !important;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 70%;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color: saddlebrown !important;
+    transition: all 0.3s ease;
+    transform: translateX(-50px);
+}
+
+.nav-link:hover::after {
+    width: 80%;
+}
+
+.title {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    background-color: white;
+    margin-top: 100px;
+    padding: 10px 15px;
+    box-shadow:
+        8px 8px 15px rgba(0, 0, 0, 0.1),
+        -8px -8px 15px rgba(255, 255, 255, 0.8);
+}
+
+#by {
+    font-size: 25px;
+    color: grey;
+}
+
+.sort {
+    margin-top: 8px;
+    list-style: none;
+    font-size: 18px;
+    font-weight: 650;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.sort a {
+    text-decoration: none;
+    color: rgb(116, 116, 116);
+}
+
+.ro1 {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    /* background-color: #ffffff;
+    width: 1300px;
+    height: 235px;
+    margin-top: 50px;
+    margin-left: 20px;
+    border-radius: 20px; */
+}
+
+/* .ro1:hover {
+    border: 1px solid blue;
+    box-shadow:
+        2px 2px 10px rgba(135, 207, 235, 0.616),
+        -2px -2px 10px rgba(135, 207, 235, 0.658);
+} */
+
+.hotel {
+    margin-left: -30px;
+    margin-top: 10px;
+}
+
+.details {
+    margin-top: 10px;
+}
+
+.cost {
+    margin-top: 15px;
+}
+
+.pic {
+    width: 300px;
+    height: 240px;
+    border-radius: 20px;
+    margin-left: 30px;
+}
+
+.abt {
+    color: sienna;
+}
+
+.con {
+    color: #261FB3;
+    font-weight: bold;
+    font-size: large;
+}
+
+.revbtn {
+    background-color: #261fb3ce;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    width: 40px;
+    border-radius: 7px;
+}
+
+.pri {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+}
+
+.tax {
+    font-size: 15px;
+    color: gray;
+
+}
+
+.book {
+    background-color: #0056b3;
+    color: white;
+    font-size: 22px;
+    font-weight: 800;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 6px;
+
+}
+
+.ser {
+    color: rgb(11, 97, 11);
+}
+
+.ro2 {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    /* background-color: #ffffff;
+    width: 1300px;
+    height: 230px;
+    margin-top: 50px;
+    margin-left: 20px;
+    border-radius: 20px; */
+}
+/* 
+.ro2:hover {
+    border: 1px solid blue;
+    box-shadow:
+        2px 2px 10px rgba(135, 207, 235, 0.616),
+        -2px -2px 10px rgba(135, 207, 235, 0.658);
+} */
+
+.del {
+    font-size: 15px;
+    font-weight: 500;
+    color: gray;
+}
+
+.ro3 {
+
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    /* background-color: #ffffff;
+    width: 1300px;
+    height: 230px;
+    margin-top: 50px;
+    margin-left: 20px;
+    border-radius: 20px; */
+}
+/* 
+.ro3:hover {
+    border: 1px solid blue;
+    box-shadow:
+        2px 2px 10px rgba(135, 207, 235, 0.616),
+        -2px -2px 10px rgba(135, 207, 235, 0.658);
+} */
+
+.ro4 {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    /* background-color: #ffffff;
+    width: 1300px;
+    height: 230px;
+    margin-top: 50px;
+    margin-left: 20px;
+    border-radius: 20px; */
+}
+
+/* .ro4:hover {
+    border: 1px solid blue;
+    box-shadow:
+        2px 2px 10px rgba(135, 207, 235, 0.616),
+        -2px -2px 10px rgba(135, 207, 235, 0.658);
+} */
+
+
+
+.box1 {
+    background-color: #ffffff;
+    width: 1200px;
+    margin-top: 50px;
+    margin-left: 20px;
+    border-radius: 20px;
+
+}
+
+.box1:hover {
+    border: 1px solid blue;
+    box-shadow:
+        2px 2px 10px rgba(135, 207, 235, 0.616),
+        -2px -2px 10px rgba(135, 207, 235, 0.658);
+}
+.box2 {
+    background-color: #ffffff;
+    width: 1200px;
+    margin-top: 50px;
+    margin-left: 20px;
+    border-radius: 20px;
+
+}
+
+.box2:hover {
+    border: 1px solid blue;
+    box-shadow:
+        2px 2px 10px rgba(135, 207, 235, 0.616),
+        -2px -2px 10px rgba(135, 207, 235, 0.658);
+}
+.box3 {
+    background-color: #ffffff;
+    width: 1200px;
+    margin-top: 50px;
+    margin-left: 20px;
+    border-radius: 20px;
+
+}
+
+.box3:hover {
+    border: 1px solid blue;
+    box-shadow:
+        2px 2px 10px rgba(135, 207, 235, 0.616),
+        -2px -2px 10px rgba(135, 207, 235, 0.658);
+}
+.box4 {
+    background-color: #ffffff;
+    width: 1200px;
+    margin-top: 50px;
+    margin-left: 20px;
+    border-radius: 20px;
+
+}
+
+.box4:hover {
+    border: 1px solid blue;
+    box-shadow:
+        2px 2px 10px rgba(135, 207, 235, 0.616),
+        -2px -2px 10px rgba(135, 207, 235, 0.658);
+}
+
+.toggle-btn {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.toggle-btn:hover {
+    background-color: #0056b3;
+}
+
+.amenities {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 500px;
+}
+
+.amenities-items {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    margin-bottom: 15px;
+}
+
+#myCarousel {
+    width: 550px;
+    height: 300px;
+    margin-top: 60px;
+}
+
+.carousel-item img {
+    width: 500px;
+    height: 300px;
+    border-radius: 20px;
+    transition: transform 0.6s ease-in-out !important;
+}
+
+
+
+.more-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #ffffff;
+    width: 1200px;
+    margin-top: 10px;
+    border-radius: 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+
+.facilty {
+    font-size: 20px;
+}
+
+.name {
+    font-size: 30px;
+}
+
+.quali {
+    font-size: 23px;
+    font-weight: 500;
+    color: rgba(128, 128, 128, 0.788);
+}
+
+.quali:hover {
+    color: blue;
+}
+
+.rev {
+    border: none;
+    background-color: rgba(173, 216, 230, 0.562);
+    border-radius: 6px;
+    color: seagreen;
+    font-weight: bold;
+}
+
+.rat {
+    font-size: 16px;
+}
+
+.amen {
+    font-size: 30px;
+}
+
+.head {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.head a {
+    text-decoration: none;
+    color: black;
+}
+.open{
+    width: 300px;
+    height: 40px;
+    border: 1px solid black;
+    background-color: transparent;
+    border-radius: 10px;
+    font-size: 23px;
+    font-weight: 400;
+}
+/* .open:hover{
+    background-color:rgba(173, 216, 230, 0.664);
+} */
+.side-panel {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+    padding: 20px;
+    transition: right 0.4s ease;
+    z-index: 1000;
+    margin-top: 60px;
+    border: 2px solid gray;
+    scroll-behavior: smooth;
+    overflow-y: scroll;         /* Enable scrolling */
+    -ms-overflow-style:none;   /* IE/Edge */
+    scrollbar-width: none;      /* Firefox */
+  }
+  
+  .side-panel::-webkit-scrollbar {
+    display: none;              /* Chrome/Safari */
+  }
+  
+.side-panel.open {
+    right: 0;
+}
+
+.close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    float: right;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .side-panel {
+        width: 100%;
+        margin-top: 50px;
+        padding: 15px;
+    }
+}
+.star-label{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+}
+.user{
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 30px;
+    margin-left: 30px;
+    gap: 50px;
+}
+.star{
+    margin-top: 10px;
+}
+.lab{
+    font-size: 18px;
+    font-weight: 400;
+}
+.count{
+    font-size: 18px;
+    font-weight: 400;
+}
+.bar-cont{
+    background-color: gainsboro;
+    width: 200px;
+    height: 8px;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+.in5{
+    background-color: orangered;
+    width: 170px;
+    border-radius: 4px;
+    height: 8px;
+    
+}
+.in4{
+    background-color: orangered;
+    width: 120px;
+    border-radius: 4px;
+    height: 8px;
+    
+}
+.in3{
+    background-color: orangered;
+    width: 90px;
+    border-radius: 4px;
+    height: 8px;
+    
+}
+.in2{
+    background-color: orangered;
+    width: 50px;
+    border-radius: 4px;
+    height: 8px;
+    
+}
+.in1{
+    background-color: orangered;
+    width: 20px;
+    border-radius: 4px;
+    height: 8px;
+}
+.btn1{
+    background-color: rgba(173, 216, 230, 0.363);
+    color:rgb(49, 77, 49);
+    border: none;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 4px;
+}
+.plus{
+    font-size: 17px;
+}
+.text-info{
+    font-size: 20px !important;
+    color: #007bff !important; 
+}
+
+
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .box1, .box2, .box3, .box4 {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .ro1, .ro2, .ro3, .ro4 {
+        flex-wrap: wrap;
+        padding: 15px;
+    }
+    
+    .hotel, .details, .cost {
+        width: 100%;
+        margin: 10px 0;
+        text-align: center;
+    }
+    
+    .pic {
+        margin-left: 0;
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .more-details {
+        width: 95%;
+    }
+    
+    #myCarousel {
+        width: 100%;
+    }
+    
+    .carousel-item img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .user {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 20px;
+    }
+    
+    .nav-link {
+        font-size: 16px;
+    }
+    
+    .title {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 80px;
+    }
+    
+    .sort {
+        margin: 5px 0;
+        font-size: 14px;
+    }
+    
+    #by {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .pri {
+        font-size: 20px;
+    }
+    
+    .book {
+        width: 120px;
+        font-size: 18px;
+    }
+    
+    .amenities {
+        flex-direction: column;
+    }
+    
+    .amenities-items {
+        width: 100%;
+    }
+    
+    .side-panel {
+        width: 90%;
+    }
+    
+    .head {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-collapse {
+        background-color: #ffffff;
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+    
+    .toggle-btn, .book {
+        width: 100%;
+    }
+    
+    .more-details {
+        padding: 10px;
+    }
+    
+    .name {
+        font-size: 24px;
+    }
+    
+    .quali {
+        font-size: 18px;
+    }
+    
+    .amen {
+        font-size: 24px;
+    }
+    
+    .facilty {
+        font-size: 16px;
+    }
+    
+    .bar-cont {
+        width: 150px;
+    }
+}
+
+/* Ensure the side panel is full width on mobile */
+@media (max-width: 480px) {
+    .side-panel {
+        width: 100%;
+        padding: 15px;
+    }
+    
+    .open {
+        width: 100%;
+    }
+}
+
+/* Make sure the navbar toggler works */
+.navbar-toggler {
+    border: none;
+    padding: 0.25rem 0.5rem;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* Ensure proper spacing for the collapsed navbar */
+@media (max-width: 991.98px) {
+    .navbar-nav {
+        padding-top: 10px;
+    }
+    
+    .nav-item {
+        margin-bottom: 5px;
+    }
+}
+
+/* Make sure the carousel is responsive */
+.carousel {
+    max-width: 100%;
+}
+
+/* Adjust the booking button size on smaller screens */
+@media (max-width: 400px) {
+    .book {
+        font-size: 16px;
+        height: 36px;
+    }
+}

@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% load static %}
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="{% static  'css/style.css' %}">
+  <title>Mizo</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg fixed-top  ">
+      <div class="container">
+        <a class="navbar-brand" href="#">Mizo</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">about</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">Contact</a>
+            </li>
+            <button class="log" onclick="document.getElementById('login').showModal()">Login</button>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="head">Find Your Perfect Stay – Book Smarter, Travel Better</h1>
+    </div>
+  </section>
+  <section>
+    <dialog id="login">
+      <div class="all">
+        <div class="box">
+          <div class="box1">
+            <div class="hotel">
+
+            </div>
+          </div>
+          <div class="box2">
+            <button onclick="document.getElementById('login').close()" class="close"><i class="fa-solid fa-xmark fa-lg"
+                style="color: #ffffff;"></i></button>
+            <h1>MI<span>ZO</span> </h1>
+            <p class="acc">Create your account to book your perfect stay</p>
+            <form action="">
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="log-mail" placeholder="Enter Your email" required>
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="pass" placeholder="Enter Your Password" required>
+              </div>
+            </form>
+            <div class="remember">
+              <input type="checkbox" name="check" id="checker">
+              <label for="checkbox">Remember</label>
+
+              <button type="submit" class="log-btn">LOGIN</button><br>
+              <div class="signup">
+                Don't have an account? <a href="#">Sign up</a>
+              </div>
+              <div class="social-signup">
+                <p>Or sign up with</p>
+                <div class="social-icons">
+                  <div class="social-icon facebook">
+                    <i class="fab fa-facebook-f"></i>
+                  </div>
+                  <div class="social-icon google">
+                    <i class="fab fa-google"></i>
+                  </div>
+                  <div class="social-icon twitter">
+                    <i class="fab fa-twitter"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </dialog>
+  </section>
+  
+  <section class="premium-hotel-search">
+    <div class="container-md">
+      <div class="parent">
+        <div class="child">
+          <div class="search-container">
+            <input type="text" name="destination" class="search-box" id="searchbox" placeholder="Destination">
+            <div class="suggestions" id="suggestions" style="display: none;">
+
+            </div>
+          </div>
+        </div>
+        <div class="child">
+          <input type="date" name="check_in" class="future-date" min="">
+        </div>
+        <div class="child">
+          <input type="date" name="check_out" class="future-date" min="">
+        </div>
+        <div class="drop">
+          <div class="select-group">
+            <span class="name">Adult</span>
+            <select id="adult" name="adults" required>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+          <div class="select-group">
+            <span class="name">Child</span>
+            <select id="child" name="child">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+          <div class="select-group">
+            <span class="name">Room</span>
+            <select id="room" name="rooms" required>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+        </div>
+        <div class="sea-btn">
+          <button type="submit" class="search-button" id="searchbutton">
+            <i class="fas fa-search"></i> Search
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="room">
+      <div class="card" style="width: 17rem;">
+       <a href="{% url  'banglore' %}"><img src="{% static 'images/front 1.webp' %}" class="card-img-top" alt="..."></a>
+        <div class="card-body">
+          <h5 class="card-title">Super Townhouse Oak indranagar</h5>
+          <p class="card-text">Bengaluru, india</p>
+          <p class="good"><button class="rat">7.1</button> good 114 reviews </p>
+        </div>
+      </div>
+      <div class="card" style="width: 17rem;">
+       <a href="{% url 'pune' %}"><img src="{% static 'images/front 2.webp' %}" class="card-img-top" alt="..."></a>
+        <div class="card-body">
+          <h5 class="card-title">Hotel paradise</h5>
+          <p class="card-text">pune, india</p>
+          <p class="good"><button class="rat">6.5</button> pleasant 218 reviews </p>
+        </div>
+      </div>
+      <div class="card" style="width: 17rem;">
+       <a href="{% url 'delhi' %}"><img src="{% static 'images/front 3.webp' %}" class="card-img-top" alt="..."></a>
+        <div class="card-body">
+          <h5 class="card-title">hotel scott</h5>
+          <p class="card-text">Delhi, india</p>
+          <p class="good"><button class="rat">8.5</button> very good 236 reviews </p>
+        </div>
+      </div>
+      <div class="card"  style="width: 17rem;">
+        <a href="{% url 'hydrabad' %}"><img src="{% static 'images/front 4.webp' %}" class="card-img-top" alt="..."></a>
+        <div class="card-body">
+          <h5 class="card-title">Diamond hotel</h5>
+          <p class="card-text">Hyderabad, india</p>
+          <p class="good"><button class="rat">9.0</button> superb 319reviews </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <h3 class="browse">Browse by property type</h3>
+    <div class="prop">
+      <div class="types">
+        <img src="{% static 'images/type 1.jpeg' %}" alt="photo" class="photo">
+        <h4>Hotels</h4>
+      </div>
+      <div class="types">
+        <img src="{% static 'images/type 2.jpeg' %}" alt="photo" class="photo">
+        <h4>Apartments</h4>
+      </div>
+      <div class="types">
+        <img src="{% static 'images/type 3.jpeg' %}" alt="photo" class="photo">
+        <h4>Resorts</h4>
+      </div>
+      <div class="types">
+        <img src="{% static 'images/type 4.jpeg' %}" alt="photo" class="photo">
+        <h4>Villas</h4>
+      </div>
+    </div>
+  </section>
+  <section>
+    <h4 class="off">Offers</h4>
+    <p class="pro">Promotions, deals and special offers for you</p>
+    <div class="offer">
+      <div class="gift">
+        <div class="same">
+          <h4 class="let">Sign in, save money</h4>
+          <p class="line">Save 10% or more at participating properties. Just look <br> for the blue Genius label.</p>
+          <button class="sign">Sign in</button>
+          <button class="regi">Register</button>
+        </div>
+        <div class="geni">
+          <img src="{% static 'images/genius.jpeg' %}" alt="genius" class="gen">
+        </div>
+      </div>
+      <div class="coup">
+        <div class="same">
+          <h4 class="let">Quick escape, quality time</h4>
+          <p>Save up to 20% with a Getaway Deal</p>
+          <button class="save">Save on Stay</button>
+        </div>
+        <div>
+          <img src="{% static 'images/couple.jpeg' %}" alt="photo" class="cop">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="pic">
+      <div class="tour">
+        <h4 class="title">Gujarat</h4>
+        <img src="{% static 'images/guj.avif' %}" alt="photo" class="place">
+      </div>
+      <div class="tour">
+        <h4 class="title">Mumbai</h4>
+        <img src="{% static 'images/mumbai gate.avif' %}" alt="photo" class="place">
+      </div>
+    </div>
+    <div class="pic1">
+      <div class="tour">
+        <h4 class="title">Delhi</h4>
+        <img src="{% static 'images/red fort.avif' %}" alt="photo" class="fam">
+      </div>
+      <div class="tour">
+        <h4 class="title">kasi</h4>
+        <img src="{% static 'images/kasi.avif' %}" alt="photo" class="fam">
+      </div>
+      <div class="tour">
+        <h4 class="title">Bengaluru</h4>
+        <img src="{% static 'images/ben.avif' %}" alt="photo" class="fam">
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="hot">
+      <div class="card second" style="width: 17rem;">
+        <a href="{% url  'delhi' %}"><img src="{% static 'images/del 1.1.jpg' %}" class="card-img-top" alt="..."></a>
+        <div class="card-body">
+          <h5 class="card-title">Villa Domina</h5>
+          <p class="card-text">Delhi, india</p>
+          <p class="good"><button class="rat">9.0</button> superb 451reviews </p>
+        </div>
+      </div>
+      <div class="card second" style="width: 17rem;">
+       <a href="{% url  'hydrabad' %}"><img src="{% static 'images/ban 1.1.jpg' %}" class="card-img-top" alt="..."></a>
+        <div class="card-body">
+          <h5 class="card-title">Hotel nizam</h5>
+          <p class="card-text">Hyderabad, india</p>
+          <p class="good"><button class="rat">7.0</button> good 191reviews </p>
+        </div>
+      </div>
+      <div class="card second" style="width: 17rem;">
+        <a href="{% url  'chennai' %}"><img src="{% static 'images/del 2.1.jpg' %}" class="card-img-top" alt="..."></a>
+        <div class="card-body">
+          <h5 class="card-title">Starlight Hotel</h5>
+          <p class="card-text">Chennai, india</p>
+          <p class="good"><button class="rat">8.0</button> Very good 321reviews </p>
+        </div>
+      </div>
+      <div class="card second" style="width: 17rem;">
+       <a href="{% url  'kolkata' %}"><img src="{% static 'images/che 2.jpg' %}" class="card-img-top" alt="Kolkata"></a>
+        <div class="card-body">
+          <h5 class="card-title">Hotel Dev</h5>
+          <p class="card-text">Kolkata, india</p>
+          <p class="good"><button class="rat">6.0</button> Nice 290reviews </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container my-5">
+    <div class="row text-center customer">
+      <div class="col-md-4 mb-4">
+        <div class="feature-icon">
+          <i class="fa-solid fa-map-location-dot fa-2xl" style="color: #005eff;"></i>
+        </div>
+        <h3>Best Locations</h3>
+        <p>Hotels in prime locations near popular attractions and business districts.</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="feature-icon">
+          <i class="fa-solid fa-hand-holding-dollar fa-2xl" style="color: #005eff;"></i>
+        </div>
+        <h3>Best Price Guarantee</h3>
+        <p>We guarantee the best prices for your stay. Found a better deal? We'll match it!</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="feature-icon">
+          <i class="fa-solid fa-headset fa-2xl" style="color: #0960f6;"></i>
+        </div>
+        <h3>24/7 Support</h3>
+        <p>Our customer service team is available round the clock to assist you.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="text-center mb-5">What Our Guests Say</h2>
+      <div class="row row row-cols-1 row-cols-md-2 row-cols-lg-3 " >
+        <div class="col">
+          <div class="review">
+            <div class="feed">
+              <img src="{% static 'images/woman 1.avif' %}" alt="woman" class="pep">
+            </div>
+            <div class="name m-2">
+              <h4 class="user">Andrea</h4>
+              <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <p class="fedbac">"The booking process was so easy and the hotel exceeded all our expectations.
+            Will definitely use LuxStayagain!"
+          </p>
+        </div>
+
+        <div class="col">
+          <div class="review ">
+            <div class="feed">
+              <img src="{% static 'images/men.avif' %}" alt="man" class="pep">
+            </div>
+            <div class="name m-2">
+              <h4 class="user">Rick Grimes</h4>
+              <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+          </div>
+          <p class="fedbac">"Best price guarantee actually works! Saved 20% compared to other sites for the same hotel."
+          </p>
+        </div>
+
+        <div class="col ">
+          <div class="review ">
+            <div class="feed">
+              <img src="{% static 'images/woman 2.avif' %}" alt="man" class="pep">
+            </div>
+            <div class="name m-2">
+              <h4 class="user">Sasha</h4>
+              <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <p class="fedbac">"Customer service helped me change my booking last minute with no hassle. Very impressed!"
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container-lg mt-5">
+      <h3 class="text-start">Popular with travellers from India</h3>
+      <div class="list mt-4">
+        <ul>
+          <li class="city active">Domestic Cities</li>
+          <li class="city">Internationals Cities</li>
+          <li class="city">Regions</li>
+          <li class="city">Countries</li>
+          <li class="city">Place to Stay</li>
+        </ul>
+      </div>
+      <div class="city-grid mb-4">
+
+        <div class="city-card">Simagar hotels</div>
+        <div class="city-card">Bengaluru hotels</div>
+        <div class="city-card">Mumbai hotels</div>
+        <div class="city-card">Ooty hotels</div>
+        <div class="city-card">Jaipur hotels</div>
+
+        <div class="city-card">Lonavala hotels</div>
+        <div class="city-card">Hyderabad hotels</div>
+        <div class="city-card">Puri hotels</div>
+        <div class="city-card">Puducherry hotels</div>
+        <div class="city-card">Chennai hotels</div>
+
+        <div class="city-card">Varkala hotels</div>
+        <div class="city-card">Ayodhya hotels</div>
+        <div class="city-card">Varanasi hotels</div>
+        <div class="city-card">Rishikesh hotels</div>
+        <div class="city-card">Munnar hotels</div>
+
+        <div class="city-card">Pune hotels</div>
+        <div class="city-card">Mysore hotels</div>
+        <div class="city-card">New Delhi hotels</div>
+        <div class="city-card">Cochin hotels</div>
+        <div class="city-card">Udaipur hotels</div>
+
+        <div class="city-card">Gurgaon hotels</div>
+        <div class="city-card">Kolkata hotels</div>
+        <div class="city-card">Shimla hotels</div>
+        <div class="city-card">Mussoorie hotels</div>
+        <div class="city-card">Manali hotels</div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center bg-primary text-white p-5 rounded-3">
+          <h2 class="mb-4">Get Exclusive Deals</h2>
+          <p class="mb-4">Subscribe to our newsletter and receive special offers and discounts</p>
+          <form class="row g-3 justify-content-center " id="sub">
+            <div class="col-md-8 ">
+              <input type="email" class="form-control form-control-lg" placeholder="Your email address ">
+            </div>
+            <div class="col-md-4 ">
+              <button type="submit" class="btn btn-light btn-lg w-100">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="foot mt-5">
+
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Hotels</a></li>
+          <li><a href="#">Destination</a></li>
+          <li><a href="#">Deals & Offer</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Cancellation policy</a></li>
+          <li><a href="#">privacy policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Payment Methods</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Contact us</h3>
+        <div class="contact-info">
+          <p><i class="fas fa-phone"></i>  +1 (123) 456-7890</p>
+          <p><i class="fas fa-envelope"></i> bookings@example.com</p>
+          <p><i class="fas fa-map-marker-alt"></i>  123 Travel Street, Suite 100, New York, NY</p>
+        </div>
+      </div>
+
+      <div class="footer-info mt-5">
+        <h3>Newsletter</h3>
+        <p>Stay updated with exclusive deals!</p>
+        <form class="newletter">
+          <input type="email" id="news-mail" name="newsletter" placeholder="Your email address">
+          <button type="submit">Subscribe</button>
+        </form>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="{% static 'js/main.js' %}"></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+
