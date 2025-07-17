@@ -282,8 +282,26 @@ form {
   background-color: #1da1f2;
 }
 
+/* .hero {
+  background-image: url(pool.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  filter: brightness(0.8);
+}
+
+.head {
+  color: white;
+  font-size: 5rem;
+  margin-left: 50px;
+  margin-top: 30px;
+} */
 .hero {
-  background-image: url("/static/images/pool.jgp");
+  background-image: url("/static/images/pool.jpg");
   background-size: cover;
   background-position: center;
   height: 100vh;
