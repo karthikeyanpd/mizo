@@ -301,7 +301,7 @@ form {
   margin-top: 30px;
 } */
 .hero {
-  background-image: url("/static/images/common/pool.jpg");
+  background-image: url("/static/images/pool.jpg");
   background-size: cover;
   background-position: center;
   height: 100vh;
