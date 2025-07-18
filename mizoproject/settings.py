@@ -78,14 +78,10 @@ WSGI_APPLICATION = 'mizoproject.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config(default='postgres://postgres:admin@localhost:5432/hotel', conn_max_age=600){
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'hotel',
-        'USER': 'postgres',
-        'PASSWORD': 'admin',
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
+    'default': dj_database_url.config(
+        default='your_render_database_url',
+        conn_max_age=600
+    )
 }
 
 
