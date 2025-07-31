@@ -1,4 +1,3 @@
-
        // Get all toggle buttons and their corresponding more-details sections
        const toggleBtns = document.querySelectorAll('.toggle-btn');
        const moreDetailsSections = document.querySelectorAll('.more-details');

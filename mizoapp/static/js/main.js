@@ -1,4 +1,78 @@
 
+  const navbar = document.querySelector(".navbar");
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 10) {
+      navbar.classList.add("bg-visible");
+    } else {
+      navbar.classList.remove("bg-visible");
+    }
+  });
+
+
+function validateLogin(event) {
+  event.preventDefault(); // Prevent default form submission for custom validation
+
+  const email = document.getElementById('log-mail').value.trim();
+  const password = document.getElementById('pass').value.trim();
+  const checker = document.getElementById('checker').checked;
+
+  if (!email && !password && !checker) {
+    alert("Please fill all fields and check the box.");
+    return false;
+  }
+
+  if (!email) {
+    alert("Please enter your email.");
+    return false;
+  }
+
+  if (!password) {
+    alert("Please enter your password.");
+    return false;
+  }
+
+  if (!checker) {
+    alert("Please check the Remember box.");
+    return false;
+  }
+
+  // If all fields are valid
+  alert("Login successful!");
+  return true;
+}
+
+document.querySelector('.newletter').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const email = document.getElementById('news-mail').value.trim();
+  
+  if (!email) {
+    alert("Please enter your email");
+    return false;
+  }
+  
+  if (!email.includes('@') || !email.includes('.')) {
+    alert("Please enter a valid email");
+    return false;
+  }
+  
+  alert("Subscribed successfully!");
+  this.reset(); // Clear the form
+  return true;
+});
+ // Initialize AOS
+  document.addEventListener('DOMContentLoaded', function() {
+    AOS.init({
+      duration: 800, // Animation duration in milliseconds
+      easing: 'ease-in-out', // Easing type
+      once: false, // Whether animation should happen only once
+      mirror: true, // Whether elements should animate out while scrolling past them
+      offset: 120, // Offset (in px) from the original trigger point
+      delay: 100, // Delay between animations (in ms)
+    });
+    
+  });
+  
 
 // Set the minimum date in the date input field
 document.querySelector('input[type="date"]').min = new Date().toISOString().split('T')[0];
